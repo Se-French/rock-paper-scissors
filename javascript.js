@@ -1,13 +1,13 @@
-const options = ['rock', 'paper', 'scissors'];
+//This function will randomly return 'rock', 'paper', or 'scissors'
+//Use this for computerSelection
 
-function getComputerChoice(options){
+function getComputerChoice(){
+    const options = ['rock', 'paper', 'scissors'];
     let randomChoice = options[Math.floor(Math.random() * options.length)];
     return randomChoice;
 }
-//This function (above) will randomly return 'rock', 'paper', or 'scissors'
-//Use this for computerSelection
 
-const computerSelection = getComputerChoice(options);
+const computerSelection = getComputerChoice();
 //console.log(computerSelection);
 
 //Below is where we get the value for playerSelection
@@ -27,11 +27,6 @@ if (playerChoice === null){
 }    
 
 //console.log (playerSelection);
-
-//Using the above else...if statement makes the case of the users input not matter, 
-//since the computer uses all lower case options for its Selection. It also makes 
-//all other values, including the cancel button, invalid options for the game.
-
 
 //The following function plays a single round of the game and includes results
 //for all possible outcomes 
