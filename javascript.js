@@ -7,7 +7,8 @@ function getComputerChoice(options){
 //This function (above) will randomly return 'rock', 'paper', or 'scissors'
 //Use this for computerSelection
 
- console.log (getComputerChoice(options));
+const computerSelection = getComputerChoice(options);
+console.log(computerSelection);
 
 //Below is where we get the value for playerSelection
  
@@ -32,3 +33,4 @@ console.log (playerSelection);
 //uses all lower case options for its Selection. It 
 //also makes all other values, including the cancel 
 //button, invalid options for the game.
+
