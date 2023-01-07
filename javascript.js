@@ -29,11 +29,11 @@ function playRound(playerSelection, computerSelection){
         if ((playerSelection === 'rock' && computerSelection === 'scissors')
             ||(playerSelection === 'scissors' && computerSelection === 'paper')
             ||(playerSelection === 'paper' && computerSelection === 'rock')){
-            return 'You win this round! ' + playerSelection + ' beats ' + computerSelection;
+            return 'You win this round, ' + playerSelection + ' beats ' + computerSelection + '!';
         } else if ((playerSelection === 'scissors' && computerSelection === 'rock')
             ||(playerSelection === 'rock' && computerSelection === 'paper')
             ||(playerSelection === 'paper' && computerSelection === 'scissors')){
-            return 'You lose this round! ' + computerSelection + ' beats ' + playerSelection;
+            return 'You lose this round, ' + computerSelection + ' beats ' + playerSelection + '!';
         } else if (playerSelection === computerSelection){
             return 'Wow, it\'s a tie!';
         } else {
@@ -56,13 +56,13 @@ function game(){
         //console.log(computerSelection);
         //console.log(playerSelection);
             //Keep score
-            if ((response === 'You win this round! rock beats scissors')
-                    || (response === 'You win this round! scissors beats paper')
-                    || (response === 'You win this round! paper beats rock')){
+            if ((response === 'You win this round, rock beats scissors!')
+                    || (response === 'You win this round, scissors beats paper!')
+                    || (response === 'You win this round, paper beats rock!')){
                     playerScore = playerScore + 1;
-                } else if ((response === 'You lose this round! rock beats scissors')
-                    || (response === 'You lose this round! paper beats rock')
-                    || (response === "You lose this round! scissors beats paper")){
+                } else if ((response === 'You lose this round, rock beats scissors!')
+                    || (response === 'You lose this round, paper beats rock!')
+                    || (response === 'You lose this round, scissors beats paper!')){
                     computerScore = computerScore + 1;
                 }
     }
