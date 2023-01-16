@@ -3,10 +3,11 @@ function getComputerChoice(){
     return options[Math.floor(Math.random() * options.length)];
 }
 
-//let computerSelection = getComputerChoice();
-//console.log (computerSelection);
+let computerSelection = getComputerChoice();
+console.log (computerSelection);
 
-function getPlayerChoice(){
+
+/*function getPlayerChoice(){
     const playerChoice = prompt("Choose rock, paper, or scissors!");
 
     if (playerChoice === null){
@@ -22,10 +23,13 @@ function getPlayerChoice(){
         }  
     }
 
-//let playerSelection = getPlayerChoice();
-//console.log (playerSelection);
- 
-function playRound(playerSelection, computerSelection){
+let playerSelection = getPlayerChoice();
+//console.log (playerSelection)*/
+
+
+
+
+function playRound(){
         if ((playerSelection === 'rock' && computerSelection === 'scissors')
             ||(playerSelection === 'scissors' && computerSelection === 'paper')
             ||(playerSelection === 'paper' && computerSelection === 'rock')){
@@ -43,7 +47,29 @@ function playRound(playerSelection, computerSelection){
 
 //console.log (playRound(playerSelection, computerSelection));
 
-function game(){
+
+const buttons = document.querySelectorAll('button');
+const div = document.querySelector('div');
+
+buttons.forEach((button) => {
+    button.addEventListener('click', (event) => {
+    playerSelection = event.target.id;
+    playRound();
+    div.textContent = playRound();
+    });
+});
+
+
+
+
+
+
+
+
+
+
+
+/*function game(){
 
     let playerScore = 0;
     let computerScore = 0;
@@ -81,4 +107,4 @@ function game(){
 }
 
 
-game();
+game();*/
