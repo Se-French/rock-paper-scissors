@@ -20,12 +20,12 @@ function playRound(event){
         if ((playerSelection === 'rock' && computerSelection === 'scissors')
             ||(playerSelection === 'scissors' && computerSelection === 'paper')
             ||(playerSelection === 'paper' && computerSelection === 'rock')){
-          divRound.textContent =  'You win this round, ' + playerSelection + ' beats ' + computerSelection + '!';
+          divRound.textContent =  'You win, ' + playerSelection + ' beats ' + computerSelection + '!';
           playerScore = playerScore + 1;
         } else if ((playerSelection === 'scissors' && computerSelection === 'rock')
             ||(playerSelection === 'rock' && computerSelection === 'paper')
             ||(playerSelection === 'paper' && computerSelection === 'scissors')){
-          divRound.textContent = 'You lose this round, ' + computerSelection + ' beats ' + playerSelection + '!';
+          divRound.textContent = 'You lose, ' + computerSelection + ' beats ' + playerSelection + '!';
           computerScore = computerScore + 1;
         } else if (playerSelection === computerSelection){
           divRound.textContent = 'Wow, it\'s a tie!';
